@@ -1,21 +1,24 @@
 "use client";
 
 import { useEffect, useRef } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 const googleAdsId = 'AW-11013360114';
 
 export function GoogleAdsTracker() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const hasTrackedInitialPath = useRef(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined' || typeof window.gtag !== 'function') {
+    const trackingWindow = window as Window & {
+      gtag?: (...args: unknown[]) => void;
+    };
+
+    if (typeof window === 'undefined' || typeof trackingWindow.gtag !== 'function') {
       return;
     }
 
-    const queryString = searchParams.toString();
+    const queryString = window.location.search.slice(1);
     const pagePath = queryString ? `${pathname}?${queryString}` : pathname;
 
     if (!hasTrackedInitialPath.current) {
@@ -23,11 +26,11 @@ export function GoogleAdsTracker() {
       return;
     }
 
-    window.gtag('config', googleAdsId, {
+    trackingWindow.gtag('config', googleAdsId, {
       page_path: pagePath,
       page_location: window.location.href
     });
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return null;
 }
