@@ -9,8 +9,9 @@ import { FaqAccordion } from '@/components/sections/faq';
 import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Home',
-  description: siteConfig.description
+  title: 'AC Repair Near Me in Dehradun | Refrigerator and Washing Machine Repair',
+  description:
+    'Looking for AC repair near me in Dehradun, refrigerator repair near me in Dehradun or washing machine repair near me? Book fast doorstep service from Doon Home Care Services.'
 };
 
 export default function HomePage() {
@@ -18,11 +19,27 @@ export default function HomePage() {
     <>
       <Hero />
 
+      <section className="section-shell py-16 md:py-20">
+        <div className="glass-card border-cyan-300/20 bg-gradient-to-br from-cyan-300/10 via-sky-500/10 to-white/5 p-8 md:p-10">
+          <div className="max-w-4xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-300">Local SEO Coverage</p>
+            <h2 className="mt-4 font-display text-3xl font-semibold text-slate-950 dark:text-white sm:text-4xl">
+              AC repair near me, refrigerator repair near me and washing machine repair near me in Dehradun
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
+              Doon Home Care Services helps customers searching for AC repair near me, refrigerator repair near me
+              Dehradun and washing machine repair near me with quick doorstep visits, transparent estimates and
+              professional repair support. We also handle microwave, TV and other electronics repair across Dehradun.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="section-shell py-20 md:py-28">
         <SectionHeading
           eyebrow="Featured Services"
-          title="Repair coverage for the appliances customers rely on every day"
-          description="Our featured services blend fast diagnostics, doorstep convenience and premium communication so you can book with confidence."
+          title="Repair coverage for the appliances customers search for locally"
+          description="We help with AC repair near me in Dehradun, refrigerator repair near me, washing machine repair near me and more with doorstep convenience and clear communication."
         />
         <div className="mt-10">
           <ServicesGrid />

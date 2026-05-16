@@ -6,8 +6,9 @@ import { ServicesGrid } from '@/components/sections/services-grid';
 import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Services',
-  description: 'Explore our full appliance repair service lineup and emergency support availability.'
+  title: 'AC Repair Near Me Dehradun | Refrigerator and Washing Machine Repair Services',
+  description:
+    'Explore AC repair near me Dehradun, refrigerator repair near me Dehradun and washing machine repair near me with fast local doorstep service and emergency support.'
 };
 
 export default function ServicesPage() {
@@ -16,8 +17,8 @@ export default function ServicesPage() {
       <section className="section-shell py-16 md:py-20">
         <SectionHeading
           eyebrow="Services"
-          title="Complete repair coverage for home appliances and electronics"
-          description="Choose the repair service you need and book a technician in a few clicks."
+          title="Complete repair coverage for AC, fridge and washing machine issues in Dehradun"
+          description="Choose the repair service you need, including AC repair near me, refrigerator repair near me Dehradun and washing machine repair near me, then book a technician in a few clicks."
         />
 
         <div className="mt-10">
@@ -31,11 +32,11 @@ export default function ServicesPage() {
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-300">Emergency Repair</p>
               <h2 className="mt-4 font-display text-3xl font-semibold text-slate-950 dark:text-white sm:text-4xl">
-                Appliance breakdown? We prioritize urgent repair requests.
+                Appliance breakdown near you? We prioritize urgent AC, fridge and washing machine repair requests.
               </h2>
               <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600 dark:text-slate-300">
-                If your AC, fridge or other essential device stops working suddenly, send us a booking request or call
-                us directly for the fastest available slot.
+                If your AC, fridge or washing machine stops working suddenly, send us a booking request or call us
+                directly for the fastest available slot in Dehradun.
               </p>
             </div>
 
